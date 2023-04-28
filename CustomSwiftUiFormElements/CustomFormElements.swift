@@ -59,6 +59,19 @@ struct CustomFormElements: View {
     @State private var about : String = ""
     @State private var aboutErrMsg : String = ""
     
+    @State private var gender : String = ""
+    @State private var genderErrMsg : String = ""
+    
+    @State private var interests : [String] = []
+    @State private var interestsErrMsg : String = ""
+    
+    @State private var agree : Bool = false
+    @State private var agreeErrMsg : String = ""
+    
+    @State private var phonenumberCode : String = ""
+    @State private var phonenumber : String = ""
+    @State private var phonenumberErrMsg : String = ""
+    
     @State private var numberOfShakes : Double = 0
     
     var body: some View {
@@ -73,17 +86,30 @@ struct CustomFormElements: View {
             
             FornSecureTextField(title: "Enter password", name: $password, error: passwordErrMsg, max: 10)
             
+            FormSelectField(title: "Gender", name: $gender, error: genderErrMsg, options: ["Male","Female"])
+            
+            FormMultipleSelectField(title: "Interests", name: $interests, error: interestsErrMsg, options: ["Coding","Cycling","DIY","Music","Religion","Politics"], max: 3)
+            
+            FormToggleField(title: "Do you agree to this", name: $agree, error: agreeErrMsg).shake(with: numberOfShakes)
+            
+            FormPhoneNumberField(title: "Enter phone number", name: $phonenumber, selectedCode: $phonenumberCode, error: phonenumberErrMsg)
+            
             Button {
-                if firstName.isEmpty{
-                    firstNameErrMsg = "first name is required!"
+//                if firstName.isEmpty{
+//                    firstNameErrMsg = "first name is required!"
+//                    errorShake($numberOfShakes)
+//                }else if lastName.isEmpty{
+//                    lastNameErrMsg = "last name is required!"
+//                    errorShake($numberOfShakes)
+//                }else if username.isEmpty{
+//                    usernameErrMsg = "user name is required!"
+//                    errorShake($numberOfShakes)
+//                }else
+                if agree == false{
+                    agreeErrMsg = "You must agree"
                     errorShake($numberOfShakes)
-                }else if lastName.isEmpty{
-                    lastNameErrMsg = "last name is required!"
-                    errorShake($numberOfShakes)
-                }else if username.isEmpty{
-                    usernameErrMsg = "user name is required!"
-                    errorShake($numberOfShakes)
-                }else{
+                }
+                else{
                     
                 }
             } label: {
