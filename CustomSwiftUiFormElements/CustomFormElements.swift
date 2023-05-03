@@ -72,27 +72,36 @@ struct CustomFormElements: View {
     @State private var phonenumber : String = ""
     @State private var phonenumberErrMsg : String = ""
     
+    @State private var hashtags : [String]  = []
+    @State private var hashtagErrMsg : String = ""
+    
     @State private var numberOfShakes : Double = 0
     
     var body: some View {
         VStack{
-            FormTextField(title: "Enter first name", name: $firstName, error: firstNameErrMsg,max: 7, showCount: true).shake(with: numberOfShakes)
+            Group{
+                FormTextField(title: "Enter first name", name: $firstName, error: firstNameErrMsg,max: 7, showCount: true).shake(with: numberOfShakes)
+                
+                FormTextField(title: "Enter last name", name: $lastName, error: lastNameErrMsg).shake(with: numberOfShakes)
+                
+                FormTextField(title: "Enter username", name: $username, error: usernameErrMsg).shake(with: numberOfShakes)
+                
+                FormTextArea(title: "About", name: $about, error: aboutErrMsg, showCount: true).shake(with: numberOfShakes)
+            }
             
-            FormTextField(title: "Enter last name", name: $lastName, error: lastNameErrMsg).shake(with: numberOfShakes)
-            
-            FormTextField(title: "Enter username", name: $username, error: usernameErrMsg).shake(with: numberOfShakes)
-            
-            FormTextArea(title: "About", name: $about, error: aboutErrMsg, showCount: true).shake(with: numberOfShakes)
-            
-            FornSecureTextField(title: "Enter password", name: $password, error: passwordErrMsg, max: 10)
-            
-            FormSelectField(title: "Gender", name: $gender, error: genderErrMsg, options: ["Male","Female"])
-            
-            FormMultipleSelectField(title: "Interests", name: $interests, error: interestsErrMsg, options: ["Coding","Cycling","DIY","Music","Religion","Politics"], max: 3)
-            
-            FormToggleField(title: "Do you agree to this", name: $agree, error: agreeErrMsg).shake(with: numberOfShakes)
+            Group{
+                FornSecureTextField(title: "Enter password", name: $password, error: passwordErrMsg, max: 10)
+                
+                FormSelectField(title: "Gender", name: $gender, error: genderErrMsg, options: ["Male","Female"])
+                
+                FormMultipleSelectField(title: "Interests", name: $interests, error: interestsErrMsg, options: ["Coding","Cycling","DIY","Music","Religion","Politics"], max: 3)
+                
+                FormToggleField(title: "Do you agree to this", name: $agree, error: agreeErrMsg).shake(with: numberOfShakes)
+            }
             
             FormPhoneNumberField(title: "Enter phone number", name: $phonenumber, selectedCode: $phonenumberCode, error: phonenumberErrMsg)
+            
+            FormHashTagField(title: "Enter a hashtag", name: $hashtags, error: hashtagErrMsg)
             
             Button {
 //                if firstName.isEmpty{

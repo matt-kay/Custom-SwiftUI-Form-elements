@@ -19,6 +19,7 @@
 		CE9778E729EDA8BF0039C5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9778E629EDA8BF0039C5A9 /* Assets.xcassets */; };
 		CE9778EA29EDA8BF0039C5A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9778E929EDA8BF0039C5A9 /* Preview Assets.xcassets */; };
 		CE9778F129EDA93E0039C5A9 /* DefaultSwiftUIFormElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9778F029EDA93E0039C5A9 /* DefaultSwiftUIFormElements.swift */; };
+		CEA4CEED2A025C5E003B117D /* FormHashTagField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4CEEC2A025C5E003B117D /* FormHashTagField.swift */; };
 		CEAC1D0929EFD7C200874DE3 /* FormSelectField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC1D0829EFD7C200874DE3 /* FormSelectField.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		CE9778E629EDA8BF0039C5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9778E929EDA8BF0039C5A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE9778F029EDA93E0039C5A9 /* DefaultSwiftUIFormElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSwiftUIFormElements.swift; sourceTree = "<group>"; };
+		CEA4CEEC2A025C5E003B117D /* FormHashTagField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormHashTagField.swift; sourceTree = "<group>"; };
 		CEAC1D0829EFD7C200874DE3 /* FormSelectField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSelectField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				CE412C0829FB7CDE00E3ACAA /* FormMultipleSelectField.swift */,
 				CE412C0A29FB8E7300E3ACAA /* FormToggleField.swift */,
 				CE412C0C29FB976F00E3ACAA /* FormPhoneNumberField.swift */,
+				CEA4CEEC2A025C5E003B117D /* FormHashTagField.swift */,
 			);
 			path = "Form Elements";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				CE8C56E129EE8BFD004B885F /* FornSecureTextField.swift in Sources */,
 				CE8F46CB29EDB0E3004E1686 /* FormTextField.swift in Sources */,
 				CE412C0B29FB8E7300E3ACAA /* FormToggleField.swift in Sources */,
+				CEA4CEED2A025C5E003B117D /* FormHashTagField.swift in Sources */,
 				CE9778E329EDA8BE0039C5A9 /* CustomSwiftUiFormElementsApp.swift in Sources */,
 				CE412C0D29FB976F00E3ACAA /* FormPhoneNumberField.swift in Sources */,
 				CE8C56DF29EE7C45004B885F /* FormTextArea.swift in Sources */,
